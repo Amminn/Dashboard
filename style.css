@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap');
+
+:root {
+    --main-color: #2D7DFF;
+    --gray-color: #847D93;
+    --dark-background-color: #2C2931;
+    --blue-background-color: #2485FF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.4s ease;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: inline-block;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(252.37deg, #BD00FF 5.28%, #00A3FF 98.3%);
+    padding: 0.75rem;
+}
+
+.fram {
+    width: 100%;
+    height: 100%;
+    background: url('/images/hao-wang.jpg'), #221F26;
+    background-blend-mode: screen, normal;
+    background-repeat: no-repeat;
+    background-position: 7%;
+    background-size: cover;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.container {
+    padding-inline: 2rem;
+    overflow: hidden;
+    /* background-color: blue; */
+    position: relative;
+    height: 100%;
+}
+
+.active .menu {
+    left: 0;
+    opacity: 1;
+    /* display: block; */
+}
+
+.header {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.header a:nth-of-type(2) {
+    margin-inline: auto;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 27px;
+    letter-spacing: -0.12em;
+    color: var(--main-color);
+}
+
+.back {
+    padding: 0 0 1rem 2rem;
+    /* transform: scale();  */
+}
+
+.open { 
+    display: flex;
+    align-items: center;    
+}
+
+.menu {
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    /* display: none; */
+    /* top: 6rem; */
+    /* left : 0; */
+    width: 75%;
+    background-color: var(--dark-background-color);
+    /* background-color: red; */
+    height: 100%;
+    padding: 2rem 0rem;
+    z-index: 100;
+    color: white;
+    border-radius: 13px 0px 0px 13px
+}
+
+.menu li a{
+    padding: 0.5rem 2rem;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    color: var(--gray-color);
+}
+
+.menu li a.focus{
+    font-weight: 700;
+    background: #4497FF;
+    color: white;
+}
+
+.large-screen-wrapper {
+    height: 100%;
+}
+
+.content {
+    align-items: center;
+    height: 100%;
+
+    display: flex;
+
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2.68rem;
+    letter-spacing: 0em;
+    color: white;
+    margin-bottom: 2.3rem;
+}
+
+.content h3 {
+    font-size: 2.12rem;
+    font-weight: 200;
+    line-height: 2.3rem;
+    letter-spacing: 0em;
+    color: #847D93; 
+    margin-bottom: 2.8rem;
+}
+
+.content .btn {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: 0em;
+    color: white;
+    padding: 1.25rem 1.5rem 1.25rem 0.9375rem;
+    border: 1px solid #4D4D4D;
+}
+
+.content .btn:hover {
+    background-color: #00A3FF;
+    border: 1px solid transparent;
+}
+
+.content .btn img {
+    display: inline-block;
+    margin-right: 1.25rem;
+    transform: translateY(13%);
+}
+
+@media screen and (min-width: 754px) {
+    body {
+        padding: 2.6rem;
+    }
+    .wrapper {
+        margin-left: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        padding: 4.6rem;
+    }
+    .fram {
+        background-size: 140% 150%;
+        background-position: -12% 40%;
+    }
+    .content {
+        height: initial;
+        max-height: 100%;
+    }
+    .open {
+        display: none;
+    }
+    .large-screen-wrapper {
+        width: 100%
+    }
+    .fram .container {
+        padding: 0;
+        display: flex;
+    }
+    .back {
+        display: none;
+    }
+    .menu {
+        display: block;
+        opacity: 1;
+        position: initial;
+        width: 13.31rem;
+        padding: 3.625rem 0;
+    }
+    .header {
+        height: 8rem;
+        margin-top: 1rem;
+        /* display: initial; */
+        justify-content: flex-start;
+    }
+    .header a:nth-of-type(2) {
+        margin-inline: 0;
+        margin-left: 3rem;
+    }
+}
