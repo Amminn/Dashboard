@@ -57,7 +57,6 @@ body {
 .container {
     padding-inline: 2rem;
     overflow: hidden;
-    /* background-color: blue; */
     position: relative;
     height: 100%;
 }
@@ -65,7 +64,6 @@ body {
 .active .menu {
     left: 0;
     opacity: 1;
-    /* display: block; */
 }
 
 .header {
@@ -88,7 +86,10 @@ body {
 
 .back {
     padding: 0 0 1rem 2rem;
-    /* transform: scale();  */
+}
+
+.back:hover {
+    transform: translateX(-4px);
 }
 
 .open { 
@@ -100,12 +101,8 @@ body {
     position: absolute;
     left: -100%;
     opacity: 0;
-    /* display: none; */
-    /* top: 6rem; */
-    /* left : 0; */
     width: 75%;
     background-color: var(--dark-background-color);
-    /* background-color: red; */
     height: 100%;
     padding: 2rem 0rem;
     z-index: 100;
@@ -179,7 +176,11 @@ body {
 .content .btn img {
     display: inline-block;
     margin-right: 1.25rem;
-    transform: translateY(13%);
+    transform: translate(0%, 13%);
+}
+
+.content .btn:hover .img {
+    transform: translate(20%, 13%);
 }
 
 @media screen and (min-width: 754px) {
@@ -227,7 +228,6 @@ body {
     .header {
         height: 8rem;
         margin-top: 1rem;
-        /* display: initial; */
         justify-content: flex-start;
     }
     .header a:nth-of-type(2) {
